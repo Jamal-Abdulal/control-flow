@@ -14,7 +14,7 @@
 fun main(args: Array<String>) {
     minimumOf(5,7)
     rangeOf(4)
-    inferredTypeOf(0.0F)
+    println(inferredTypeOf(0.0F))
     stringContains("wordle")
 }
 
@@ -51,16 +51,16 @@ fun inferredTypeOf(variable: Any): String = when (variable){
     //    Adopt the same approach for the following types: Long, Double, Float or Boolean.
     // When the data type is not Int, Long, Double, Float or Boolean, print that the data type is something else.
 
-    Int->"Int"
-    Float->"Float"
-    Long->"Long"
-    Double->"Double"
-    Boolean->"Boolean"
-    String ->"String"
+    is Int->"Int"
+    is Float->"Float"
+    is Long->"Long"
+    is Double->"Double"
+    is Boolean->"Boolean"
+    is String ->"String"
     else->"Unknown"
 }
 
-fun stringContains(str : String){
+fun stringContains(str : String) {
     //TODO If the string, passed as a parameter:
     //    - contains the letter A, print the string and say it contains A.
     //    - contains the letter B, print the string and say it contains B.
