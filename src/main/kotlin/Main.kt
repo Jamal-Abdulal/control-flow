@@ -60,11 +60,18 @@ fun inferredTypeOf(variable: Any): String = when (variable){
     else->"Unknown"
 }
 
-fun stringContains(str : String) {
+fun stringContains(str : String) = when {
     //TODO If the string, passed as a parameter:
     //    - contains the letter A, print the string and say it contains A.
     //    - contains the letter B, print the string and say it contains B.
     //    - contains the letter C, print the string and say it contains C.
     //    - is empty, inform the user that it is empty.
-    //    - otherwise print the string and say it doesn't contain A, B or C.
+    //    - otherwise print the string and say it doesn't contain A, B or C
+    str.contains('a') ->str+"contains letter a"
+    str.contains('b')  ->str+"contains letter b"
+    str.contains('c')  ->str+"contains letter c"
+    str.isEmpty() -> "Empty String"
+    else -> println(str+ " doesn't contain A, B or C")
+
+
 }
